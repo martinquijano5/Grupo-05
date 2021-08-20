@@ -1,3 +1,4 @@
+antes que nada, checkear que estemos usando la consola desde la ubicacion de archivo correcto. si no esta, hacer cd ruta. en mi caso seria cd C:\Users\Martin\Desktop\udesa\segundo semestre\Programacion 1\tp final\Grupo-05
 primero, hacer git add archivo.extension (o hacemos git add . para agregar todo)
 despues, checkear con git status
 commitear el archivo con git commit -m "decir que estamos haciendo"
