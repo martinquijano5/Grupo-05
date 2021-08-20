@@ -1,0 +1,5 @@
+primero, hacer git add .
+despues, checkear con git status
+commitear el archivo con git commit m-"decir que estamos haciendo"
+para subirlo a la nube, hacer git push origin master
+para bajarse los archivos, git pull origin master
