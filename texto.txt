@@ -1,5 +1,7 @@
 primero, hacer git add archivo.extension (o hacemos git add . para agregar todo)
 despues, checkear con git status
-commitear el archivo con git commit m-"decir que estamos haciendo"
+commitear el archivo con git commit -m "decir que estamos haciendo"
+para comprobar que este todo bien, hacemos otro git status. si dice "nothing to commit, working directory clean" significa que ya commiteamos todo
 para subirlo a la nube, hacer git push origin master
 para bajarse los archivos, git pull origin master
+ir a https://github.com/martinquijano5/Grupo-05 y comprobar que el archivo este subido
