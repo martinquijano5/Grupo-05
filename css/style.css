@@ -27,13 +27,17 @@ a{
     text-decoration: none;
 }
 
+h1{
+    margin: 0;
+}
+
 header{
     max-width: 1180px;
-    background-color: #c4bcf7;
+    background-color: #ccc;
     margin: 0;
     border-bottom-left-radius: 1.35em;
     border-bottom-right-radius: 1.35em;
-    border-bottom: #c4bcf7;
+    border-bottom: #ccc;
     width: 100%;
     display: flex;
     align-items: center;
@@ -84,7 +88,11 @@ footer{
     display: flex;
     justify-content: space-around;
     max-width: 1180px;
+}
+
+.titulo-section{
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 #main-home {
@@ -94,7 +102,7 @@ footer{
 }
 
 .una-peli{
-    background-color: #444;
+    background-color: #ccc;
     border-top-left-radius: 1.35em;
     border-top-right-radius: 1.35em;
     border-bottom-left-radius: 1.35em;
@@ -114,8 +122,12 @@ footer{
 }
 
 .titulo-peli{
+    font-size: 16px;
+    font-weight: bold;
     margin-bottom: 10px;
     max-width: 175px;
+    padding-left: 15px;
+    padding-top: 5px;
 }
 .una-peli p {
     margin-top: 10px;
@@ -123,16 +135,83 @@ footer{
     max-width: 175px;
 }
 
+.genero-fav{
+    display: flex;
+    align-items: center;
+    padding-right: 5px;
+}
+
 .genero-peli{
     margin-bottom: 10px;
 }
 
-#listado-peli-populares{
+#listado-pelis-populares{
     display: flex;
     flex-direction: row;
+    width: 1180px;
 }
 
-.scroll {
+#listado-series-populares{
+    display: flex;
+    flex-direction: row;
     width: 1180px;
-    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+#main-busqueda{
+    display: flex;
+    flex-direction: column;
+}
+
+.resultados-busqueda{
+    max-width: 1180px;
+}
+
+.un-resultado{
+    max-width: 1180px;
+    display: flex;
+    background-color: #ccc;
+    border-top-left-radius: 1.35em;
+    border-top-right-radius: 1.35em;
+    border-bottom-left-radius: 1.35em;
+    border-bottom-right-radius: 1.35em;
+    padding: 0.1rem;
+    margin-bottom: 20px;
+}
+
+.datos-un-resultado{
+    display: flex;
+    flex-direction: column;
+}
+
+.foto-un-resultado{
+    width: 150px;
+    height: 222.5;
+    align-self: center;
+    padding: 10px;
+}
+
+.titulo-una-busqueda{
+    font-weight: bold;
+    font-size: 32px;
+}
+
+.titulo-favorito{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icon-resultado{
+    margin-right: 20px;
+    height: 30px;
+    width: 30px;
+}
+
+.icon-3 {
+    font-size: 4em;
+}
+.icon-2 {
+    font-size: 2em;
 }
