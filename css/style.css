@@ -3,7 +3,7 @@
   }
 
 body {
-    background-image: url(../images/fondo1.jpg);
+    background-image: linear-gradient(#640071, #6b1187, #73289e, #7e44b4, #8e66ca, #a48ee1, #c4bcf7);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -27,17 +27,17 @@ a{
     text-decoration: none;
 }
 
-h1{
+h1, h2, h3, h4, h5, h6{
     margin: 0;
 }
 
 header{
     max-width: 1180px;
-    background-color: #ccc;
+    background-color: #c4bcf7;
     margin: 0;
     border-bottom-left-radius: 1.35em;
     border-bottom-right-radius: 1.35em;
-    border-bottom: #ccc;
+    border-bottom: #c4bcf7;
     width: 100%;
     display: flex;
     align-items: center;
@@ -45,9 +45,22 @@ header{
     max-width: 1180px;
 }
 
+.contenedor-banner-home{
+    position: relative;
+    text-align: center;
+}
+
+#titulo-banner-home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 .favorite-nav-header{
     margin-right: 20px;
 }
+
 .nav-header{
     display: flex;
 }
@@ -78,21 +91,27 @@ header img{
 
 footer{
     max-width: 1180px;
-    background-color: #9627e8;
+    background-color: #640071;
     margin: 0;
     padding: 20px 0px 20px 0px;
     border-top-left-radius: 1.35em;
     border-top-right-radius: 1.35em;
-    border-bottom: #9627e8;
+    border-bottom: #640071;
     width: 100%;
     display: flex;
     justify-content: space-around;
     max-width: 1180px;
+    margin-top: 20px;
 }
 
 .titulo-section{
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 100%;
+}
+
+#banner{
+    margin-top: 20px;
 }
 
 #main-home {
@@ -102,37 +121,42 @@ footer{
 }
 
 .una-peli{
-    background-color: #ccc;
-    border-top-left-radius: 1.35em;
-    border-top-right-radius: 1.35em;
-    border-bottom-left-radius: 1.35em;
-    border-bottom-right-radius: 1.35em;
+    background-color: #c4bcf7;
+    border-radius: 1.35rem;
     padding: 0.1rem;
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+    width: 220px;
+}
+
+.ultima{
+    margin-right: 0px;
 }
 
 .una-peli img {
     width: 180px;
     height: 267px;
     align-self: center;
-    padding-left: 10px;
-    padding-right: 10px;
 }
 
 .titulo-peli{
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 10px;
-    max-width: 175px;
+    max-width: 220px;
     padding-left: 15px;
-    padding-top: 5px;
+    margin-top: 10px;
 }
-.una-peli p {
+.una-peli h4 {
     margin-top: 10px;
     margin-left: 5px;
-    max-width: 175px;
+    max-width: 100%;
+    font-weight: normal;
+}
+
+h4{
+    margin-bottom: 0;
 }
 
 .genero-fav{
@@ -149,6 +173,7 @@ footer{
     display: flex;
     flex-direction: row;
     width: 1180px;
+    flex-wrap: wrap;
 }
 
 #listado-series-populares{
@@ -156,25 +181,41 @@ footer{
     flex-direction: row;
     width: 1180px;
     margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+#listado-series-mas-vistas{
+    display: flex;
+    flex-direction: row;
+    width: 1180px;
+    flex-wrap: wrap;
 }
 
 #main-busqueda{
     display: flex;
     flex-direction: column;
+    max-width: 1180px;
 }
 
-.resultados-busqueda{
-    max-width: 1180px;
+#resultados{
+    display: flex;
+    flex-direction: column;
+    width: 1180px;
+    flex-wrap: wrap;
+}
+
+.titulo-section{
+    font-size: 32px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
 .un-resultado{
     max-width: 1180px;
     display: flex;
     background-color: #ccc;
-    border-top-left-radius: 1.35em;
-    border-top-right-radius: 1.35em;
-    border-bottom-left-radius: 1.35em;
-    border-bottom-right-radius: 1.35em;
+    border-radius: 1.35rem;
     padding: 0.1rem;
     margin-bottom: 20px;
 }
@@ -214,4 +255,49 @@ footer{
 }
 .icon-2 {
     font-size: 2em;
+}
+
+.contendor-foto-texto{
+    position: relative;
+    text-align: center;
+    color: white;
+    font-size: 48px;
+}
+
+.centered{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.un-genero{
+    width: 280px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.un-genero img {
+    border-radius: 1.35rem;
+    width: 280px;
+    height: auto;
+}
+
+#todos-generos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#titulo-busqueda{
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+
+.ultima{
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
