@@ -296,6 +296,10 @@ h4{
     font-size: 32px;
 }
 
+#no-encontrado{
+    display: none;
+}
+
 
 .ultima{
     margin-right: 0px;
