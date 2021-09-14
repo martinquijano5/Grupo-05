@@ -300,6 +300,9 @@ h4{
     display: none;
 }
 
+.detail{
+    align-self: left;
+}
 
 .ultima{
     margin-right: 0px;
