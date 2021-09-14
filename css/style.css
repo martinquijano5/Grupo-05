@@ -299,6 +299,19 @@ h4{
 #no-encontrado{
     display: none;
 }
+.un-detalle{ 
+    display: flex;
+}
+
+.un-detalle img {
+   width: 180px;
+   height: 267px;
+}
+#main-detalle{ 
+    display: flex;
+    flex-direction: column;
+    max-width: 1180px;
+}
 
 
 .ultima{
