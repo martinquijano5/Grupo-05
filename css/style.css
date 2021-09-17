@@ -187,21 +187,19 @@ h4{
 #listado-pelis-populares{
     display: flex;
     flex-direction: row;
-    width: 1180px;
     flex-wrap: wrap;
 }
+
 
 #listado-series-populares{
     display: flex;
     flex-direction: row;
-    width: 1180px;
     flex-wrap: wrap;
 }
 
 #listado-series-mas-vistas{
     display: flex;
     flex-direction: row;
-    width: 1180px;
     flex-wrap: wrap;
 }
 
@@ -424,4 +422,49 @@ h4{
 .ultima{
     margin-right: 0px;
     margin-bottom: 0px;
+}
+
+@media(max-width:450px){
+    body{
+        max-width: 450px;
+    }
+    #main-home {
+        display: flex;
+        flex-direction: column;
+        max-width: 450px;
+    }
+    #listado-pelis-populares{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #listado-pelis-populares div {
+        overflow: auto;
+        display: flex;
+    }
+
+    #listado-series-populares{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #listado-series-populares div {
+        overflow: auto;
+        display: flex;
+    }
+
+    #listado-series-mas-vistas{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    #listado-series-mas-vistas div {
+        overflow: auto;
+        display: flex;
+    }
+
+    .una-peli{
+        padding: 14px;
+        text-decoration: none;
+    }
 }
