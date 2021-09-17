@@ -46,6 +46,10 @@ header{
     max-width: 1180px;
 }
 
+main{
+    width: 1180px;
+}
+
 #contenedor-banner-home{
     position: relative;
     text-align: center;
@@ -220,7 +224,6 @@ h4{
 #resultados{
     display: flex;
     flex-direction: column;
-    width: 1180px;
     flex-wrap: wrap;
 }
 
@@ -436,7 +439,9 @@ h4{
     body{
         max-width: 450px;
     }
-
+    main{
+        max-width: 450px;
+    }
 
     #main-home {
         display: flex;
@@ -476,5 +481,9 @@ h4{
     .una-peli{
         padding: 14px;
         text-decoration: none;
+    }
+
+    #resultados{
+        width: 100%;
     }
 }
