@@ -10,6 +10,8 @@ body {
     flex-direction: column;
     margin: 0;
     align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 p{
@@ -47,28 +49,18 @@ header{
 }
 
 main{
-    width: 1180px;
-}
-
-#contenedor-banner-home{
-    position: relative;
-    text-align: center;
-}
-
-#contenedor-banner-home img{
-    width: 100%;
-    height: auto;
-}
-
-#contenedor-banner-home h1{
-    font-size: 48px;
+    max-width: 1180px;
 }
 
 #titulo-banner-home{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 20px;
+    font-size: 48px;
+    background-image: url(../images/fondo2.jpg);
+    height: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
 }
 
 .favorite-nav-header{
