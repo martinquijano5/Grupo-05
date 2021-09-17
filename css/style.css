@@ -46,9 +46,18 @@ header{
     max-width: 1180px;
 }
 
-.contenedor-banner-home{
+#contenedor-banner-home{
     position: relative;
     text-align: center;
+}
+
+#contenedor-banner-home img{
+    width: 100%;
+    height: auto;
+}
+
+#contenedor-banner-home h1{
+    font-size: 48px;
 }
 
 #titulo-banner-home{
@@ -228,6 +237,7 @@ h4{
 .datos-un-resultado{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .foto-un-resultado{
@@ -244,6 +254,7 @@ h4{
 
 .titulo-favorito{
     margin-top: 10px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -358,6 +369,12 @@ h4{
     padding: 1.35rem;
     margin-bottom: 20px;
     margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.sinopsis p {
+    text-align: center;
 }
 
 .reviews{
