@@ -10,8 +10,11 @@ body {
     flex-direction: column;
     margin: 0;
     align-items: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
+}
+
+main{
+    display: flex;
+    justify-content: center;
 }
 
 p{
@@ -56,7 +59,9 @@ main{
     margin-top: 20px;
     font-size: 48px;
     background-image: url(../images/fondo2.jpg);
-    height: 50vw;
+    height: 60vh;
+    width: 95vw;
+    max-width: 95%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -69,6 +74,11 @@ main{
 
 .nav-header{
     display: flex;
+    flex-wrap: wrap;
+}
+
+.favorite-nav-header{
+    margin-bottom: 10px;
 }
 
 #buscador{
@@ -91,6 +101,7 @@ form button{
 }
 
 header img{
+    display: table-row;
     width: 100px;
     height: 100px;
 }
@@ -124,6 +135,7 @@ footer{
     display: flex;
     flex-direction: column;
     max-width: 1180px;
+    align-items: center;
 }
 
 .una-peli{
@@ -132,22 +144,23 @@ footer{
     padding: 0.1rem;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
-    width: 220px;
+    width: 18%;
 }
 
-.ultima{
-    margin-right: 0px;
+.fecha-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .una-peli img {
-    width: 180px;
-    height: 267px;
+    width: 80%;
+    height: auto;
     align-self: center;
 }
 
 .una-peli-img{
-    align-self: center;
+    text-align: center;
 }
 
 .titulo-peli{
@@ -174,6 +187,8 @@ h4{
     align-items: center;
     padding-right: 5px;
     justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .genero-peli{
@@ -183,28 +198,39 @@ h4{
 #listado-pelis-populares{
     display: flex;
     flex-wrap: wrap;
+    width: 95%;
+    max-width: 100vw;
 }
 
 #listado-pelis-populares div{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #listado-series-populares{
     display: flex;
     flex-wrap: wrap;
+    width: 95%;
+    max-width: 100vw;
 }
 
 #listado-series-populares div{
     display: flex;
-}
+    width: 100%;
+    justify-content: space-between;}
 
 #listado-series-mas-vistas{
     display: flex;
     flex-wrap: wrap;
+    width: 95%;
+    max-width: 100vw;
 }
 
 #listado-series-mas-vistas div{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #main-busqueda{
@@ -217,6 +243,7 @@ h4{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    width: 95%;
 }
 
 .titulo-section{
@@ -288,22 +315,11 @@ h4{
     transform: translate(-50%, -50%);
 }
 
-.un-genero{
-    width: 280px;
-    margin-right: 20px;
-    margin-bottom: 20px;
-}
-
-.un-genero img {
-    border-radius: 1.35rem;
-    width: 280px;
-    height: auto;
-}
-
 #todos-generos{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 #titulo-busqueda{
@@ -337,8 +353,9 @@ h4{
 }
 
 .un-detalle img {
-   width: 180px;
-   height: 267px;
+    max-width: 40vw;
+    width: 180px;
+    height: 267px;
 }
 
 #main-detalle{ 
@@ -346,17 +363,29 @@ h4{
     flex-direction: column;
     width: 1180px;
     margin-top: 20px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#main-detalle{
+    max-width: 100vw;
 }
 
 .foto-contenido{
     display: flex;
+    width: 100%;
 }
 
 .contenido{
-    margin-left: 50px;
+    width: inherit;
+    margin-left: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.contenido p {
+    max-width: fit-content;
 }
 
 .sinopsis-reviews{
@@ -411,6 +440,9 @@ h4{
 
 .titulo-fav{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
 }
 
 .titulo-fav h1 {
@@ -423,18 +455,57 @@ h4{
 }
 
 
-#comedia {
+.un-genero {
     margin-top: 20px;
-    margin-right: 20px;
     font-size: 48px;
-    background-image: url(../images/99.png);
-    height: 15vw;
+    width: 30vw;
+    height: 285px;
     display: flex;
     align-items: center;
     justify-content: center;
     background-size: cover;
     border-radius: 1.35rem;
     color: white;
+}
+
+.un-genero h2 {
+    font-size: 70%;
+}
+
+#comedia{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BNzVkYWY4NzYtMWFlZi00YzkwLThhZDItZjcxYTU4ZTMzMDZmXkEyXkFqcGdeQXVyODUxOTU0OTg@._V1_SX300.jpg);
+}
+
+#familiar{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BZTQyNTU0MDktYTFkYi00ZjNhLWE2ODctMzBkM2U1ZTk3YTMzXkEyXkFqcGdeQXVyNTI4MzE4MDU@._V1_SX300.jpg);
+}
+
+#misterio{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BNzIxMjYwNDEwN15BMl5BanBnXkFtZTgwMzk5MDI3NTM@._V1_SX300.jpg);
+}
+
+#sci-fi{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BNTliYjlkNDQtMjFlNS00NjgzLWFmMWEtYmM2Mzc2Zjg3ZjEyXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg);
+}
+
+#accion{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BNjRmNDI5MjMtMmFhZi00YzcwLWI4ZGItMGI2MjI0N2Q3YmIwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg);
+}
+
+#romance{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMjMxODYyODEzN15BMl5BanBnXkFtZTgwMDk4OTU0MzE@._V1_SX300.jpg);
+}
+
+#fantasia{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BOTY2NzFjODctOWUzMC00MGZhLTlhNjMtM2Y2ODBiNGY1ZWRiXkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg);
+}
+
+#aventura{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BMTAyMjQ3OTAxMzNeQTJeQWpwZ15BbWU4MDU0NzA1MzAx._V1_SX300.jpg);
+}
+
+#drama{
+    background-image: url(https://m.media-amazon.com/images/M/MV5BZmU5NTcwNjktODIwMi00ZmZkLTk4ZWUtYzVjZWQ5ZTZjN2RlXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg);
 }
 
 .ultima{
@@ -446,6 +517,29 @@ h4{
     body{
         max-width: 450px;
     }
+
+    header{
+        justify-content: space-between;
+    }
+
+    header form{
+        width: 40%;
+        margin-left: 10px;
+    }
+
+    header img{
+        display: table-row;
+        width: 75px;
+        height: 75px;
+    }
+
+    .favorite-nav-header{
+        margin-right: 10px;
+    }
+    #navegacion ul{
+        margin-right: 10px;
+    }
+    
     main{
         max-width: 450px;
     }
@@ -488,9 +582,26 @@ h4{
     .una-peli{
         padding: 14px;
         text-decoration: none;
+        margin-right: 10px;
+        width: 100%;
+    }
+    .una-peli img {
+        width: 40vw;
+    }
+
+    .genero-fav {
+        flex-wrap: nowrap;
     }
 
     #resultados{
-        width: 100%;
+        width: 95%;
+    }
+
+    .contenido{
+        margin-left: 10px;
+    }
+    
+    .ultima{
+        margin-right: 0%;
     }
 }
