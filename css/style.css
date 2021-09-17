@@ -422,6 +422,21 @@ h4{
     height: 50px;
 }
 
+
+#comedia {
+    margin-top: 20px;
+    margin-right: 20px;
+    font-size: 48px;
+    background-image: url(../images/99.png);
+    height: 15vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    border-radius: 1.35rem;
+    color: white;
+}
+
 .ultima{
     margin-right: 0px;
     margin-bottom: 0px;
