@@ -176,6 +176,7 @@ footer{
     margin-left: 5px;
     max-width: 100%;
     font-weight: normal;
+    overflow-wrap: anywhere;
 }
 
 h4{
@@ -188,7 +189,6 @@ h4{
     padding-right: 5px;
     justify-content: space-between;
     width: 100%;
-    flex-wrap: wrap;
 }
 
 .genero-peli{
@@ -538,6 +538,7 @@ h4{
     }
     #navegacion ul{
         margin-right: 10px;
+        overflow-wrap: anywhere;
     }
     
     main{
