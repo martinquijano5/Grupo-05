@@ -84,12 +84,14 @@ main{
 #buscador{
     padding: 12px;
     border: 1px solid grey;
-    float: left;
     width: 80%;
 }
 
+header form {
+    display: flex;
+}
+
 form button{
-    float: left;
     width: 20%;
     padding: 10px;
     background: black;
@@ -119,12 +121,6 @@ footer{
     justify-content: space-around;
     max-width: 1180px;
     margin-top: 20px;
-}
-
-.titulo-section{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%;
 }
 
 #banner{
@@ -310,7 +306,7 @@ h4{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 #titulo-busqueda{
@@ -505,21 +501,16 @@ h4{
 }
 
 @media(max-width:450px){
-    body{
-        max-width: 450px;
-    }
-
-    header{
-        justify-content: space-between;
-    }
 
     header form{
-        width: 40%;
         margin-left: 10px;
     }
 
+    #buscador {
+        width: 50%;
+    }
+
     header img{
-        display: table-row;
         width: 75px;
         height: 75px;
     }
@@ -527,66 +518,32 @@ h4{
     .favorite-nav-header{
         margin-right: 10px;
     }
+    
     #navegacion ul{
-        margin-right: 10px;
         overflow-wrap: anywhere;
     }
     
-    main{
-        max-width: 450px;
-    }
-
     #main-home {
         display: flex;
         flex-direction: column;
-        max-width: 450px;
-    }
-    #listado-pelis-populares{
-        display: flex;
-        flex-wrap: wrap;
     }
 
-    #listado-pelis-populares div {
+    .articulos {
         overflow: auto;
-        display: flex;
-    }
-
-    #listado-series-populares{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    #listado-series-populares div {
-        overflow: auto;
-        display: flex;
-    }
-
-    #listado-series-mas-vistas{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    #listado-series-mas-vistas div {
-        overflow: auto;
-        display: flex;
     }
 
     .una-peli{
         padding: 14px;
-        text-decoration: none;
         margin-right: 10px;
         width: 100%;
     }
+
     .una-peli img {
         width: 40vw;
     }
 
-    .genero-fav {
-        flex-wrap: nowrap;
-    }
-
-    #resultados{
-        width: 95%;
+    .titulo-peli{
+        padding-left: 0;
     }
 
     .contenido{
@@ -595,9 +552,5 @@ h4{
 
     .un-genero{
         width: 150px;
-    }
-    
-    .ultima{
-        margin-right: 0%;
     }
 }
