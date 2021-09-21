@@ -4,8 +4,6 @@
 
 body {
     background-image: linear-gradient(#640071, #6b1187, #73289e, #7e44b4, #8e66ca, #a48ee1, #c4bcf7);
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     flex-direction: column;
     margin: 0;
