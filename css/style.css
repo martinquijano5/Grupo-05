@@ -74,7 +74,6 @@ main{
 
 .nav-header{
     display: flex;
-    flex-wrap: wrap;
 }
 
 .favorite-nav-header{
@@ -193,7 +192,7 @@ h4{
     margin-bottom: 10px;
 }
 
-#listado-pelis-populares{
+.section-articulos{
     display: flex;
     flex-wrap: wrap;
     width: 95%;
@@ -204,20 +203,6 @@ h4{
     display: flex;
     width: 100%;
     justify-content: space-between;
-}
-
-#listado-series-populares{
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    max-width: 100vw;
-}
-
-#listado-series-mas-vistas{
-    display: flex;
-    flex-wrap: wrap;
-    width: 95%;
-    max-width: 100vw;
 }
 
 #main-busqueda{
@@ -507,7 +492,11 @@ h4{
     }
 
     #buscador {
-        width: 50%;
+        width: 100px;
+    }
+
+    .nav-header{
+        flex-direction: column;
     }
 
     header img{
@@ -515,10 +504,15 @@ h4{
         height: 75px;
     }
 
+    header form button {
+        padding: 0;
+        width: 30px;
+    }
+
     .favorite-nav-header{
         margin-right: 10px;
     }
-    
+
     #navegacion ul{
         overflow-wrap: anywhere;
     }
@@ -548,6 +542,10 @@ h4{
 
     .contenido{
         margin-left: 10px;
+    }
+
+    .reviews {
+        padding: 0.75rem;
     }
 
     .un-genero{
