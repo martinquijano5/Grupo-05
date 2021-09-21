@@ -487,12 +487,9 @@ h4{
 
 @media(max-width:450px){
 
-    header form{
-        margin-left: 10px;
-    }
-
     #buscador {
         width: 100px;
+        margin-left: 10px;
     }
 
     .nav-header{
@@ -507,10 +504,6 @@ h4{
     header form button {
         padding: 0;
         width: 30px;
-    }
-
-    .favorite-nav-header{
-        margin-right: 10px;
     }
 
     #navegacion ul{
