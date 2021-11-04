@@ -112,10 +112,20 @@ footer{
     border-bottom: #640071;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
     max-width: 1180px;
     margin-top: 20px;
     color: #c4bcf7;
+}
+footer div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+footer img {
+    width: 50%;
 }
 
 #banner{
