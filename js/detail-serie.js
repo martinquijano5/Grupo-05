@@ -1,0 +1,1 @@
+//traer detalle de series dinamicamente

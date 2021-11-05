@@ -1,0 +1,1 @@
+//resultado de busqueda del usuario

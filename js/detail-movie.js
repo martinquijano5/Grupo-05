@@ -1,0 +1,1 @@
+//traer detalle de peliculas dinamicamente

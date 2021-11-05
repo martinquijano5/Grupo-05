@@ -1,0 +1,1 @@
+//traer listados de peliculas y series para mostrar dinamicamente
