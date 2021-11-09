@@ -27,7 +27,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=66374e925f9ce0061d8e101
                 urlId = `detail-movie.html?q=${data.results[i].id}`;
                 seccion.innerHTML += `
                 <article class="un-resultado">
-                <a href=""><img src="${ "https://image.tmdb.org/t/p/original" + data.results[i].poster_path}" alt="banner ${data.results[i].title}" class="foto-un-resultado">     </a>
+                <a href="${urlId}"><img src="${ "https://image.tmdb.org/t/p/original" + data.results[i].poster_path}" alt="banner ${data.results[i].title}" class="foto-un-resultado">     </a>
                 <div class="datos-un-resultado">
                    <span class="titulo-favorito">
                       <a href="${urlId}">
