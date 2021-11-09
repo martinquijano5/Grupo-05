@@ -17,7 +17,7 @@ fetch(`https://api.themoviedb.org/3/search/multi?api_key=66374e925f9ce0061d8e101
         return response.json();
     })
     .then(function (data) {
-        console.log(data.results.lengt);
+        console.log(data.results.length);
         if(data.results.length > 0) {
 
         document.querySelector('.titulo-section').innerHTML = `Resultados de busqueda para: "${q}"`
