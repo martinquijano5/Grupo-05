@@ -1,1 +1,3 @@
 //detalle de un genero
+
+
