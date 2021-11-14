@@ -467,6 +467,12 @@ h4{
     margin-bottom: 0px;
 }
 
+#gif-loading{
+    width: 100px;
+    height: auto;
+    align-self: center;
+}
+
 @media(max-width:450px){
 
     main{
