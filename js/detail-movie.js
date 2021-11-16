@@ -29,14 +29,11 @@ secciones[0].innerHTML= `
 <img src="${ "https://image.tmdb.org/t/p/original" + data.poster_path}"alt="banner ${data.name}">
 <div class="contenido">
    <div class="titulo-fav">
-      <h1 class="genero-peli">${data.name}</h1>
+      <h1 class="genero-peli">${data.title}</h1>
       <i class="icon-star-empty icon-2"></i>
    </div>
-   <p>Fecha de estreno: ${data.first_air_date}</p>
-   <p>Ultima fecha de emision: ${data.last_air_date}</p>
+   <p>Fecha de estreno: ${data.release_date}</p>
    <p>Generos: ${generos}</p>
-   <p>Temporadas: ${data.number_of_seasons}</p>
-   <p>Episodios: ${data.number_of_episodes}</p>
    <p>Satus: ${data.status}</p>
 </div>
 </div>
@@ -67,36 +64,48 @@ secciones[1].innerHTML= `
             </div>
 
 `
-let creadores ;
-for (i=0; i< data.created_by.length ; i++ ) {
-    if(i == 0){
-        creadores= `${data.created_by[i].name}`;
-    } else { creadores += `, ${data.created_by[i].name}`;}
-}
-let productores ;
+
+
+let productores = '';
 for (i=0; i< data.production_companies.length ; i++ ) {
     if(i == 0){
         productores= `${data.production_companies[i]. name}`;
     } else { productores += `, ${data.production_companies[i]. name}`;
     }
 }
-
-secciones[2].innerHTML= `
-
+console.log(productores);
+if(productores != ''){
+    secciones[2].innerHTML += `
+    <div class="datos-un-detalle">
+    <h2>Productora: </h2>
+    <h3>${productores}</h3>
+    `
+}
+let presupuesto = '';
+presupuesto = data.budget;
+if(presupuesto != ''){
+    secciones[2].innerHTML += `
 <div class="datos-un-detalle">
-<h2>Creadores:</h2>
-<h3> ${creadores} </h3>
-</div>
-<div class="datos-un-detalle">
-</div>
-<div class="datos-un-detalle">
-<h2>Productora: </h2>
-<h3>${productores}</h3>
+    <h2>Presupuesto:</h2>
+    <h3>$us ${presupuesto}</h3>
 </div>
 `
+}
+
+let ganancias = '';
+ganancias = data.revenue;
+if(ganancias != ''){
+    secciones[2].innerHTML += `
+<div class="datos-un-detalle">
+    <h2>Ganancias:</h2>
+    <h3>$us ${ganancias}</h3>
+</div>
+`
+}
 
 })
 
 .catch(function (error) {
     console.log('el error fue ' + error);
 })
+

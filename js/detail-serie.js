@@ -67,13 +67,13 @@ secciones[1].innerHTML= `
             </div>
 
 `
-let creadores ;
+let creadores = '';
 for (i=0; i< data.created_by.length ; i++ ) {
     if(i == 0){
         creadores= `${data.created_by[i].name}`;
     } else { creadores += `, ${data.created_by[i].name}`;}
 }
-let productores ;
+let productores = '';
 for (i=0; i< data.production_companies.length ; i++ ) {
     if(i == 0){
         productores= `${data.production_companies[i]. name}`;
@@ -81,22 +81,28 @@ for (i=0; i< data.production_companies.length ; i++ ) {
     }
 }
 
-secciones[2].innerHTML= `
+if(creadores != ''){
+    secciones[2].innerHTML += `
+    <div class="datos-un-detalle">
+    <h2>Creadores:</h2>
+    <h3> ${creadores} </h3>
+    </div>
+    `
+}
+if(productores != ''){
+    secciones[2].innerHTML += `
+    <div class="datos-un-detalle">
+    </div>
+    <div class="datos-un-detalle">
+    <h2>Productora: </h2>
+    <h3>${productores}</h3>
+    `
+}
 
-<div class="datos-un-detalle">
-<h2>Creadores:</h2>
-<h3> ${creadores} </h3>
-</div>
-<div class="datos-un-detalle">
-</div>
-<div class="datos-un-detalle">
-<h2>Productora: </h2>
-<h3>${productores}</h3>
-</div>
-`
 
 })
 
 .catch(function (error) {
     console.log('el error fue ' + error);
 })
+
