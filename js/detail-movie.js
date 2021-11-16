@@ -1,13 +1,14 @@
 //traer detalle de peliculas dinamicamente
 // peliculas https://api.themoviedb.org/3/movie/{movie_id}  
 
+
 let secciones = document.querySelectorAll ("section")
 let queryString = location.search;
 let queryStringObj = new URLSearchParams(queryString);
 let q = queryStringObj.get('q');
 console.log(q);
 
-fetch (`https://api.themoviedb.org/3/movie/${q}?api_key=66374e925f9ce0061d8e10191732f374`)
+fetch (`https://developers.themoviedb.org/3/movies/get-movie-details`)
 .then(function(response) {
     return response.json();
 })
@@ -34,8 +35,6 @@ secciones[0].innerHTML= `
    <p>Fecha de estreno: ${data.first_air_date}</p>
    <p>Ultima fecha de emision: ${data.last_air_date}</p>
    <p>Generos: ${generos}</p>
-   <p>Temporadas: ${data.number_of_seasons}</p>
-   <p>Episodios: ${data.number_of_episodes}</p>
    <p>Satus: ${data.status}</p>
 </div>
 </div>
