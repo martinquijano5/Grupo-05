@@ -20,8 +20,8 @@ console.log(secciones)
 let generos="todavia no le asignamos generos" ; 
 for(let i = 0; i < data.genres.length; i++){
     if(i == 0){
-        generos= `<a href="detail-genres.html?q=${data.genres[i].id}">${data.genres[i].name}</a>`;
-    } else { generos += `, <a href="genres-movie.html?q=${data.genres[i].id}">${data.genres[i].name}</a>`;}
+        generos= `<a href="detail-genres.html?q=${data.genres[i].id}&t=tv">${data.genres[i].name}</a>`;
+    } else { generos += `, <a href="detail-genres.html?q=${data.genres[i].id}&t=tv">${data.genres[i].name}</a>`;}
 }
 
 secciones[0].innerHTML= `
