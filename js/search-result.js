@@ -32,8 +32,8 @@ window.addEventListener('load', function(){
                                 //for de logica de comas, para el primer elemento no pone coma, para el resto si
                                 for(let e = 0; e < masData.genres.length; e++){
                                     if(e == 0){
-                                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;
-                                    } else { generosHTML += `, <a href="genres-movie.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;}
+                                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}&t=movie">${masData.genres[e].name}</a>`;
+                                    } else { generosHTML += `, <a href="detail-genres.html?q=${masData.genres[e].id}&t=movie">${masData.genres[e].name}</a>`;}
                                 }
                                 //console.log(generosHTML);
                                 seccion.innerHTML += `
@@ -70,8 +70,8 @@ window.addEventListener('load', function(){
                                 //for de logica de comas, para el primer elemento no pone coma, para el resto si
                                 for(let e = 0; e < masData.genres.length; e++){
                                     if(e == 0){
-                                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;
-                                    } else { generosHTML += `, <a href="detail-genres.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;}
+                                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}&t=tv">${masData.genres[e].name}</a>`;
+                                    } else { generosHTML += `, <a href="detail-genres.html?q=${masData.genres[e].id}&t=tv">${masData.genres[e].name}</a>`;}
                                 }
                                 //console.log(generosHTML);
                                 seccion.innerHTML += `
