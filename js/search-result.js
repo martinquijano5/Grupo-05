@@ -2,7 +2,6 @@
 //multiple https://api.themoviedb.org/3/search/multi
 
 window.addEventListener('load', function(){
-    document.querySelector('#gif-loading').style.display = 'none';
     let seccion = document.querySelector('#resultados');
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
@@ -100,6 +99,9 @@ window.addEventListener('load', function(){
                 document.querySelectorAll(".titulo-section")[0].style.display = "none";
                 document.querySelectorAll(".titulo-section")[1].style.display = "block";
             }
+        })
+        .then(function(){
+            document.querySelector('#gif-loading').style.display = 'none';
         })
             .catch(function (error) {
                 console.log('el error fue ' + error);
