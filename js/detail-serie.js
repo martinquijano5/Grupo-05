@@ -30,7 +30,9 @@ secciones[0].innerHTML= `
 <div class="contenido">
    <div class="titulo-fav">
       <h1 class="genero-peli">${data.name}</h1>
-      <i class="icon-star-empty icon-2"></i>
+      <button>
+        <i class="icon-star-empty icon-2"></i>
+      </button>
    </div>
    <p>Fecha de estreno: ${data.first_air_date}</p>
    <p>Ultima fecha de emision: ${data.last_air_date}</p>
@@ -67,6 +69,16 @@ secciones[1].innerHTML= `
             </div>
 
 `
+let tagline = '';
+tagline = data.tagline;
+if(tagline != '' && tagline != null){
+    secciones[2].innerHTML += `
+<div class="datos-un-detalle">
+    <h2>Tagline:</h2>
+    <h3>${tagline}</h3>
+</div>
+`
+}
 let creadores = '';
 for (i=0; i< data.created_by.length ; i++ ) {
     if(i == 0){
@@ -81,7 +93,7 @@ for (i=0; i< data.production_companies.length ; i++ ) {
     }
 }
 
-if(creadores != ''){
+if(creadores != '' && creadores != null){
     secciones[2].innerHTML += `
     <div class="datos-un-detalle">
     <h2>Creadores:</h2>
@@ -89,7 +101,7 @@ if(creadores != ''){
     </div>
     `
 }
-if(productores != ''){
+if(productores != '' && productores != null){
     secciones[2].innerHTML += `
     <div class="datos-un-detalle">
     </div>
@@ -98,8 +110,33 @@ if(productores != ''){
     <h3>${productores}</h3>
     `
 }
+//favoritos
+let boton = document.querySelectorAll('button')[1];
+let estrella = document.querySelector('.icon-2');
+console.log(estrella);
+console.log(boton);
+let listaFavoritos = [];
 
-
+if(localStorage.getItem('favoritos_serie') && localStorage.getItem('favoritos_serie') != null){
+    listaFavoritos = JSON.parse(localStorage.getItem('favoritos_serie'));
+}
+if(listaFavoritos.includes(q)){
+    boton.innerHTML = `<i class="icon-star icon-2"></i>`
+}
+boton.addEventListener('click', function(e){
+    if(listaFavoritos.includes(q)){
+        listaFavoritos.splice(listaFavoritos.indexOf(q), 1);
+        boton.innerHTML = `<i class="icon-star-empty icon-2"></i>`
+        console.log(listaFavoritos);
+    } else {
+        listaFavoritos.push(q);
+        boton.innerHTML = `<i class="icon-star icon-2"></i>`
+        console.log(listaFavoritos);
+    }
+    let guardarLocal = JSON.stringify(listaFavoritos);
+    localStorage.setItem("favoritos_serie", guardarLocal);
+    console.log(localStorage);
+    })
 })
 
 .catch(function (error) {

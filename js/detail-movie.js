@@ -30,7 +30,9 @@ secciones[0].innerHTML= `
 <div class="contenido">
    <div class="titulo-fav">
       <h1 class="genero-peli">${data.title}</h1>
-      <i class="icon-star-empty icon-2"></i>
+      <button>
+        <i class="icon-star-empty icon-2"></i>
+      </button>
    </div>
    <p>Fecha de estreno: ${data.release_date}</p>
    <p>Generos: ${generos}</p>
@@ -64,7 +66,16 @@ secciones[1].innerHTML= `
             </div>
 
 `
-
+let tagline = '';
+tagline = data.tagline;
+if(tagline != '' && tagline != null){
+    secciones[2].innerHTML += `
+<div class="datos-un-detalle">
+    <h2>Tagline:</h2>
+    <h3>${tagline}</h3>
+</div>
+`
+}
 
 let productores = '';
 for (i=0; i< data.production_companies.length ; i++ ) {
@@ -74,7 +85,7 @@ for (i=0; i< data.production_companies.length ; i++ ) {
     }
 }
 console.log(productores);
-if(productores != ''){
+if(productores != '' && productores != null){
     secciones[2].innerHTML += `
     <div class="datos-un-detalle">
     <h2>Productora: </h2>
@@ -83,7 +94,7 @@ if(productores != ''){
 }
 let presupuesto = '';
 presupuesto = data.budget;
-if(presupuesto != ''){
+if(presupuesto != '' && presupuesto != null){
     secciones[2].innerHTML += `
 <div class="datos-un-detalle">
     <h2>Presupuesto:</h2>
@@ -102,7 +113,34 @@ if(ganancias != ''){
 </div>
 `
 }
+//favoritos
+let boton = document.querySelectorAll('button')[1];
+let estrella = document.querySelector('.icon-2');
+console.log(estrella);
+console.log(boton);
+let listaFavoritos = [];
 
+if(localStorage.getItem('favoritos_movie') && localStorage.getItem('favoritos_movie') != null){
+    listaFavoritos = JSON.parse(localStorage.getItem('favoritos_movie'));
+}
+if(listaFavoritos.includes(q)){
+    boton.innerHTML = `<i class="icon-star icon-2"></i>`
+}
+boton.addEventListener('click', function(e){
+    e.preventDefault();
+    if(listaFavoritos.includes(q)){
+        listaFavoritos.splice(listaFavoritos.indexOf(q), 1);
+        boton.innerHTML = `<i class="icon-star-empty icon-2"></i>`
+        console.log(listaFavoritos);
+    } else {
+        listaFavoritos.push(q);
+        boton.innerHTML = `<i class="icon-star icon-2"></i>`
+        console.log(listaFavoritos);
+    }
+    let guardarLocal = JSON.stringify(listaFavoritos);
+    localStorage.setItem("favoritos_movie", guardarLocal);
+    console.log(localStorage);
+    })
 })
 
 .catch(function (error) {

@@ -26,16 +26,16 @@ fetch ('https://api.themoviedb.org/3/movie/popular?api_key=66374e925f9ce0061d8e1
                 //for de logica de comas, para el primer elemento no pone coma, para el resto si
                 for(let e = 0; e < masData.genres.length; e++){
                     if(e == 0){
-                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;
-                    } else { generosHTML += `, <a href="genres-movie.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;}
+                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}&t=movie">${masData.genres[e].name}</a>`;
+                    } else { generosHTML += `, <a href="detail-genres.html?q=${masData.genres[e].id}&t=movie">${masData.genres[e].name}</a>`;}
                 }
                 //console.log(generosHTML);
                 divs[0].innerHTML += `
                 <article class="una-peli">
-                  <a href="">
+                  <a href="detail-movie.html?q=${masData.id}">
                      <h3 class="titulo-peli">${masData.title}</h3>
                   </a>
-                  <a href="" class="una-peli-img"><img src=${ "https://image.tmdb.org/t/p/original" + masData.poster_path} alt="banner ${masData.title}"></a>
+                  <a href="detail-movie.html?q=${masData.id}" class="una-peli-img"><img src=${ "https://image.tmdb.org/t/p/original" + masData.poster_path} alt="banner ${masData.title}"></a>
                   <div class="fecha-div">
                      <h4>${masData.release_date}</h4>
                      <div class="genero-fav">
@@ -80,16 +80,16 @@ fetch ('https://api.themoviedb.org/3/movie/top_rated?api_key=66374e925f9ce0061d8
                 //for de logica de comas, para el primer elemento no pone coma, para el resto si
                 for(let e = 0; e < masData.genres.length; e++){
                     if(e == 0){
-                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;
-                    } else { generosHTML += `, <a href="genres-movie.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;}
+                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}&t=movie">${masData.genres[e].name}</a>`;
+                    } else { generosHTML += `, <a href="detail-genres.html?q=${masData.genres[e].id}&t=movie">${masData.genres[e].name}</a>`;}
                 }
                 //console.log(generosHTML);
                 divs[1].innerHTML += `
                 <article class="una-peli">
-                  <a href="">
+                  <a href="detail-movie.html?q=${masData.id}">
                      <h3 class="titulo-peli">${masData.title}</h3>
                   </a>
-                  <a href="" class="una-peli-img"><img src=${ "https://image.tmdb.org/t/p/original" + masData.poster_path} alt="banner ${masData.title}"></a>
+                  <a href="detail-movie.html?q=${masData.id}" class="una-peli-img"><img src=${ "https://image.tmdb.org/t/p/original" + masData.poster_path} alt="banner ${masData.title}"></a>
                   <div class="fecha-div">
                      <h4>${masData.release_date}</h4>
                      <div class="genero-fav">
@@ -134,16 +134,16 @@ fetch ('https://api.themoviedb.org/3/tv/popular?api_key=66374e925f9ce0061d8e1019
                 //for de logica de comas, para el primer elemento no pone coma, para el resto si
                 for(let e = 0; e < masData.genres.length; e++){
                     if(e == 0){
-                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;
-                    } else { generosHTML += `, <a href="genres-movie.html?q=${masData.genres[e].id}">${masData.genres[e].name}</a>`;}
+                        generosHTML = `<a href="detail-genres.html?q=${masData.genres[e].id}&t=tv">${masData.genres[e].name}</a>`;
+                    } else { generosHTML += `, <a href="detail-genres.html?q=${masData.genres[e].id}&t=tv">${masData.genres[e].name}</a>`;}
                 }
                 //console.log(generosHTML);
                 divs[2].innerHTML += `
                 <article class="una-peli">
-                  <a href="">
+                  <a href="detail-serie.html?q=${masData.id}">
                      <h3 class="titulo-peli">${masData.name}</h3>
                   </a>
-                  <a href="" class="una-peli-img"><img src=${ "https://image.tmdb.org/t/p/original" + masData.poster_path} alt="banner ${masData.name}"></a>
+                  <a href="detail-serie.html?q=${masData.id}" class="una-peli-img"><img src=${ "https://image.tmdb.org/t/p/original" + masData.poster_path} alt="banner ${masData.name}"></a>
                   <div class="fecha-div">
                      <h4>${masData.first_air_date}</h4>
                      <div class="genero-fav">

@@ -44,7 +44,6 @@ window.addEventListener('load', function(){
                                     <a href="detail-movie.html?q=${data.results[i].id}">
                                         <h2 class="titulo-una-busqueda">${data.results[i].title}</h2>
                                     </a>
-                                    <i class="icon-star-empty icon-2 icon-resultado"></i>
                                 </span>
                                 <p>Fecha de salida: ${data.results[i].release_date}</p>
                                 <p>Generos: ${generosHTML} </p>
@@ -82,7 +81,6 @@ window.addEventListener('load', function(){
                                     <a href="detail-serie.html?q=${data.results[i].id}">
                                         <h2 class="titulo-una-busqueda">${data.results[i].name}</h2>
                                     </a>
-                                    <i class="icon-star-empty icon-2 icon-resultado"></i>
                                 </span>
                                 <p>Fecha de salida: ${data.results[i].first_air_date}</p>
                                 <p>Generos: ${generosHTML} </p>
