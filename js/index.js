@@ -124,7 +124,7 @@ fetch ('https://api.themoviedb.org/3/tv/popular?api_key=66374e925f9ce0061d8e1019
     console.log(data)
     for (let i=0; i<5; i++){
 
-        let generosHTML = 'a esta pelicula no se le asignaron generos';
+        let generosHTML = 'A esta serie no se le asignaron generos';
         fetch(`https://api.themoviedb.org/3/tv/${data.results[i].id}?api_key=66374e925f9ce0061d8e10191732f374`)
             .then(function(response) {
                 return response.json();

@@ -145,5 +145,5 @@ boton.addEventListener('click', function(e){
 
 .catch(function (error) {
     console.log('el error fue ' + error);
-})
+})  
 

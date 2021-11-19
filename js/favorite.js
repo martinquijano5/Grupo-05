@@ -59,7 +59,7 @@ for(let i = 0; i < listaFavoritosMovie.length; i++){
     }
 for(let i = 0; i < listaFavoritosSerie.length; i++){
         // llamado al endpoint de detalle para obtener los generos
-        let generosHTML = 'a esta pelicula no se le asignaron generos';
+        let generosHTML = 'A esta serie no se le asignaron generos';
         console.log(i);
         console.log(listaFavoritosMovie[0]);
         fetch(`https://api.themoviedb.org/3/tv/${listaFavoritosSerie[i]}?api_key=66374e925f9ce0061d8e10191732f374`)

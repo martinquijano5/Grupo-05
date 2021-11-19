@@ -17,7 +17,7 @@ fetch (`https://api.themoviedb.org/3/tv/${q}?api_key=66374e925f9ce0061d8e1019173
 
 console.log(data)
 console.log(secciones) 
-let generos="todavia no le asignamos generos" ; 
+let generos="A esta serie no se le asignaron generos" ; 
 for(let i = 0; i < data.genres.length; i++){
     if(i == 0){
         generos= `<a href="detail-genres.html?q=${data.genres[i].id}&t=tv">${data.genres[i].name}</a>`;
