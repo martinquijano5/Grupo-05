@@ -58,7 +58,7 @@ secciones[1].innerHTML= `
                         <p class="rating-text">Valoracion: ${data.vote_average}</p>
                      </div>
                      <div class="logo-rating">
-                        <img src="./images/rating.jpeg" class="img-rating">
+                        <img src="https://media.istockphoto.com/vectors/people-icon-in-flat-style-group-of-people-symbol-for-your-web-site-vector-id1136653100?k=20&m=1136653100&s=170667a&w=0&h=ExivHgBvO-2xTO10MaXx7gP7mqEBNUpa-ov9hN_nBaY=" alt="logo popularidad" class="img-rating">
                         <p class="rating-text">Popularity: ${data.popularity}</p>
                      </div>
                   </div>
@@ -113,6 +113,16 @@ if(ganancias != ''){
 </div>
 `
 }
+let web = '';
+web = data.homepage;
+if(web != '' && web != null){
+    secciones[2].innerHTML += `
+<div class="datos-un-detalle">
+    <h2>Web:</h2>
+    <h3> <a href = "${web}" target="_blank">${web} </a> </h3>
+</div>
+`
+}
 //favoritos
 let boton = document.querySelectorAll('button')[1];
 console.log(boton);
@@ -124,12 +134,6 @@ if(localStorage.getItem('favoritos_movie') && localStorage.getItem('favoritos_mo
 if(listaFavoritos.includes(q)){
     boton.innerHTML = `<i class="icon-star icon-2"></i>`
 }
-})
-
-.catch(function (error) {
-    console.log('el error fue ' + error);
-})  
-
 boton.addEventListener('click', function(e){
     if(listaFavoritos.includes(q)){
         listaFavoritos.splice(listaFavoritos.indexOf(q), 1);
@@ -144,3 +148,9 @@ boton.addEventListener('click', function(e){
     localStorage.setItem("favoritos_movie", guardarLocal);
     console.log(localStorage);
     })
+})
+
+.catch(function (error) {
+    console.log('el error fue ' + error);
+})  
+

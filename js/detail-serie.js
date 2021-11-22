@@ -126,6 +126,16 @@ if(network != '' && network != null){
     <h3>${network}</h3>
     `
 }
+let web = '';
+web = data.homepage;
+if(web != '' && web != null){
+    secciones[2].innerHTML += `
+<div class="datos-un-detalle">
+    <h2>Web:</h2>
+    <h3> <a href = "${web}" target="_blank">${web} </a> </h3>
+</div>
+`
+}
 //favoritos
 let boton = document.querySelectorAll('button')[1];
 console.log(boton);
@@ -137,12 +147,6 @@ if(localStorage.getItem('favoritos_serie') && localStorage.getItem('favoritos_se
 if(listaFavoritos.includes(q)){
     boton.innerHTML = `<i class="icon-star icon-2"></i>`
 }
-})
-
-.catch(function (error) {
-    console.log('el error fue ' + error);
-})
-
 boton.addEventListener('click', function(e){
     
     if(listaFavoritos.includes(q)){
@@ -158,3 +162,10 @@ boton.addEventListener('click', function(e){
     localStorage.setItem("favoritos_serie", guardarLocal);
     console.log(localStorage);
     })
+
+})
+
+.catch(function (error) {
+    console.log('el error fue ' + error);
+})
+
