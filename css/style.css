@@ -15,6 +15,7 @@ main{
     display: flex;
     justify-content: center;
     max-width: 1180px;
+    width: 100%;
 }
 
 p{
@@ -317,7 +318,8 @@ h4{
 
 #main-detalle{ 
     flex-direction: column;
-    width: 1180px;
+    max-width: 1180px;
+    width: 100%;
     margin-top: 20px;
     padding-left: 1rem;
     padding-right: 1rem;
