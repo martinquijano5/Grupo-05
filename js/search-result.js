@@ -103,7 +103,7 @@ window.addEventListener('load', function(){
         .then(function(){
             document.querySelector('#gif-loading').style.display = 'none';
         })
-            .catch(function (error) {
-                console.log('el error fue ' + error);
-            })
+        .catch(function (error) {
+            console.log('el error fue ' + error);
+        })
 })

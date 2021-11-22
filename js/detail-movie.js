@@ -115,8 +115,6 @@ if(ganancias != ''){
 }
 //favoritos
 let boton = document.querySelectorAll('button')[1];
-let estrella = document.querySelector('.icon-2');
-console.log(estrella);
 console.log(boton);
 let listaFavoritos = [];
 
@@ -126,8 +124,13 @@ if(localStorage.getItem('favoritos_movie') && localStorage.getItem('favoritos_mo
 if(listaFavoritos.includes(q)){
     boton.innerHTML = `<i class="icon-star icon-2"></i>`
 }
+})
+
+.catch(function (error) {
+    console.log('el error fue ' + error);
+})  
+
 boton.addEventListener('click', function(e){
-    e.preventDefault();
     if(listaFavoritos.includes(q)){
         listaFavoritos.splice(listaFavoritos.indexOf(q), 1);
         boton.innerHTML = `<i class="icon-star-empty icon-2"></i>`
@@ -141,9 +144,3 @@ boton.addEventListener('click', function(e){
     localStorage.setItem("favoritos_movie", guardarLocal);
     console.log(localStorage);
     })
-})
-
-.catch(function (error) {
-    console.log('el error fue ' + error);
-})  
-

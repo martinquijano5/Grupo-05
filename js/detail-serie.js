@@ -92,6 +92,13 @@ for (i=0; i< data.production_companies.length ; i++ ) {
     } else { productores += `, ${data.production_companies[i]. name}`;
     }
 }
+let network = '';
+for (i=0; i< data.networks.length ; i++ ) {
+    if(i == 0){
+        network= `${data.networks[i]. name}`;
+    } else { network += `, ${data.networks[i]. name}`;
+    }
+}
 
 if(creadores != '' && creadores != null){
     secciones[2].innerHTML += `
@@ -110,10 +117,17 @@ if(productores != '' && productores != null){
     <h3>${productores}</h3>
     `
 }
+if(network != '' && network != null){
+    secciones[2].innerHTML += `
+    <div class="datos-un-detalle">
+    </div>
+    <div class="datos-un-detalle">
+    <h2>Newtorks: </h2>
+    <h3>${network}</h3>
+    `
+}
 //favoritos
 let boton = document.querySelectorAll('button')[1];
-let estrella = document.querySelector('.icon-2');
-console.log(estrella);
 console.log(boton);
 let listaFavoritos = [];
 
@@ -123,7 +137,14 @@ if(localStorage.getItem('favoritos_serie') && localStorage.getItem('favoritos_se
 if(listaFavoritos.includes(q)){
     boton.innerHTML = `<i class="icon-star icon-2"></i>`
 }
+})
+
+.catch(function (error) {
+    console.log('el error fue ' + error);
+})
+
 boton.addEventListener('click', function(e){
+    
     if(listaFavoritos.includes(q)){
         listaFavoritos.splice(listaFavoritos.indexOf(q), 1);
         boton.innerHTML = `<i class="icon-star-empty icon-2"></i>`
@@ -137,9 +158,3 @@ boton.addEventListener('click', function(e){
     localStorage.setItem("favoritos_serie", guardarLocal);
     console.log(localStorage);
     })
-})
-
-.catch(function (error) {
-    console.log('el error fue ' + error);
-})
-
