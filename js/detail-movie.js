@@ -134,7 +134,7 @@ if(localStorage.getItem('favoritos_movie') && localStorage.getItem('favoritos_mo
 if(listaFavoritos.includes(q)){
     boton.innerHTML = `<i class="icon-star icon-2"></i>`
 }
-boton.addEventListener('click', function(e){
+boton.addEventListener('click', function(){
     if(listaFavoritos.includes(q)){
         listaFavoritos.splice(listaFavoritos.indexOf(q), 1);
         boton.innerHTML = `<i class="icon-star-empty icon-2"></i>`
