@@ -14,7 +14,7 @@ fetch (`https://api.themoviedb.org/3/tv/${q}?api_key=66374e925f9ce0061d8e1019173
 })
 
 .then(function (data) {
-
+document.title = data.name;
 console.log(data)
 console.log(secciones) 
 let generos="A esta serie no se le asignaron generos" ; 
@@ -61,7 +61,7 @@ secciones[1].innerHTML= `
                         <p class="rating-text">Valoracion: ${data.vote_average}</p>
                      </div>
                      <div class="logo-rating">
-                        <img src="https://media.istockphoto.com/vectors/people-icon-in-flat-style-group-of-people-symbol-for-your-web-site-vector-id1136653100?k=20&m=1136653100&s=170667a&w=0&h=ExivHgBvO-2xTO10MaXx7gP7mqEBNUpa-ov9hN_nBaY=" alt="logo popularidad" class="img-rating">
+                        <img src="images/rating.png" alt="logo popularidad" class="img-rating">
                         <p class="rating-text">Popularity: ${data.popularity}</p>
                      </div>
                   </div>

@@ -342,6 +342,11 @@ h4{
     justify-content: space-between;
 }
 
+.contenido button {
+    background: transparent;
+    border: none;
+}
+
 .contenido p {
     max-width: fit-content;
 }

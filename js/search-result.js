@@ -6,7 +6,7 @@ window.addEventListener('load', function(){
     let queryString = location.search;
     let queryStringObj = new URLSearchParams(queryString);
     let q = queryStringObj.get('q');
-    
+    document.title = `Busqueda de ${q}`
     fetch(`https://api.themoviedb.org/3/search/multi?api_key=66374e925f9ce0061d8e10191732f374&query=${q}`)
         .then(function(response) {
             return response.json();
